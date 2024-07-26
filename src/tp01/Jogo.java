@@ -41,7 +41,7 @@ public class Jogo {
 
         for (int i = 1; i <= 5; i++) {
 
-            System.out.println("Digite a linha do Tesouro (" + i + "): ");
+            System.out.println("Digite a linha (" + i + "): ");
             linha = scanner.nextInt();
             System.out.println("Digite a coluna do Tesouro (" + i + "): ");
             coluna = scanner.nextInt();
