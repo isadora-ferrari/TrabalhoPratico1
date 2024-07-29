@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tp01;
 
-/**
- *
- * @author suelenmapa
- */
+
 import java.util.Scanner;
 
 public class Jogo {
@@ -15,7 +9,7 @@ public class Jogo {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+     
         Jogador jogador1 = criaJogador();
         Jogador jogador2 = criaJogador();
         

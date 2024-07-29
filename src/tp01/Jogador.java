@@ -1,23 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tp01;
 
-/**
- *
- * @author suelenmapa
- */
+//import java.util.ArrayList;
+
+
 public class Jogador {
     
     private String nome;
+    private int acerto1 = 0, acerto2 = 0;
     
-    
-    
+    //ArrayList<Integer>infoTab = new ArrayList <>();
+    int matriz[][] = new int [10][10];
+   
+    //set
     public Jogador (String nome){
         this.nome = nome;
     }
-
+    //get
     public String getNome() {
         return nome;
     }
@@ -29,8 +28,16 @@ public class Jogador {
         // Caso o tesouro tenha sido adicionado com sucesso, o método retorno true.
         //Caso contrário retorna false
         
-        return false;
-        
+        //se essas coordenadas na matriz estiverem com o valor 0 significa que a posição está vazia
+        // e pode ser ocupada pelo tesouro, caso contrário terá que ser nformada outra posição
+        if(matriz[linha][coluna]==0){
+            matriz[linha][coluna]=1;
+            return true;
+        }else{
+            System.out.println("Posicao invalida! Informe outra coordenada");
+            return false;
+        }
+               
     }
     
     public boolean receberAtaque(int linha, int coluna){
@@ -39,13 +46,19 @@ public class Jogador {
         //Caso encontre o tesouro, retorna true. Caso contrario, 
         //retorna false
         
-        return false;
-        
+        if(matriz[linha][coluna]==1){
+            return true;
+            
+        }else{
+            return false;
+        }
     }
     
     public boolean perdeu(){
         
         // TODO: verifica se todos os tesouros foram encontrados
+        
+        
         
         return false;
     }
@@ -57,5 +70,14 @@ public class Jogador {
         // um "T".
     }
     
+    public boolean Vencedor(){
+        if(acerto1 == 5){
+            return true;
+        }
+        if(acerto2 == 5){
+            return false;
+        }
+        return false;
+    }
     
 }
